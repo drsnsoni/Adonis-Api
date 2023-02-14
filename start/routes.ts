@@ -20,6 +20,7 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return { hello: 'world' }
-})
+
+Route.get('/', 'HomeController.index');
+Route.get('/todo', 'TodosController.index')
+Route.post('/todo', 'TodosController.store' );
